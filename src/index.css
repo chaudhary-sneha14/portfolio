@@ -1,0 +1,795 @@
+/* @import "tailwindcss"; */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: 'Poppins',sans-serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background: rgb(30,30,30);
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* **************************Navbar css************************** */
+.navbar{
+  height: 5rem;
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: rgba(30,30,30);
+
+}
+
+.navMenu{
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  height: fit-content;
+  min-width: 15rem;
+  background-color: rgb(40,40,40);
+  border-radius: 1rem;
+}
+
+.ListItem{
+  color: white;
+  padding: 0.5rem 3rem;
+  margin: 0.25rem;
+  background-color: rgb(30,30,30);
+}
+.active{
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid yellow;
+}
+
+.mobMenu{
+  display: none;
+  object-fit: cover;
+  height: 1.8rem;
+}
+.logo{
+  object-fit: cover;
+  height: 3rem;
+  width: 4rem;
+}
+.desktopMenuListItem{
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+
+}
+
+.desktopMenuListItem:hover{
+
+  color: yellow;
+  padding: 0.5rem;
+  border-bottom: 3px solid yellow;
+}
+
+.desktopMenuImg{
+  object-fit: cover;
+  height: 1rem;
+  width: 1rem;
+  margin: 1rem;
+}
+
+.desktopMenuBtn{
+  background: white;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+
+}
+
+/* ***********************Intro************************************ */
+
+#intro {
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.bg {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Intro text content */
+.introContent {
+  flex: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hello {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.introName {
+  color: yellow;
+}
+
+.introPara {
+  font-size: medium;
+  font-weight: 300;
+}
+
+.btn {
+  background-color: white;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btnImg {
+  object-fit: cover;
+  margin: 0 0.25rem;
+  height: 1rem;
+}
+
+/* --- Responsive for Mobile --- */
+@media (max-width: 768px) {
+  #intro {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .bg {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .introContent {
+    font-size: 2rem;
+    align-items: center;
+  }
+
+  .hello {
+    font-size: 1.25rem;
+  }
+
+  .introPara {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* *************************skills************************* */
+
+.skills{
+  overflow:hidden;
+  width:100vw;
+  max-width: 65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.skillTitle{
+  font-size: 3rem;
+  font-weight: 600;
+  padding-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.skillDesc{
+  font-weight: 400;
+  font-size: 1rem;
+  max-width: 51rem;
+  padding: 0.2rem;
+}
+
+.skillBars{
+  margin: 1.5rem;
+  width: 100vw;
+  max-width: 80%;
+  text-align: left;
+}
+
+.skillBar{
+  display: flex;
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(50,50,50);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px rgba(231, 237, 105, 0.3);
+}
+
+.skillBar:hover{
+   transform: scale(1.03);
+}
+
+.skillBar img{
+  object-fit: cover;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 2rem;
+}
+
+.skillBarText>p{
+  font-size: 0.9rem;
+  font-weight: 200;
+
+}
+
+/* ***************works ********************************* */
+
+.work-section {
+  padding: 6rem 12vw;
+  font-family: sans-serif;
+  /* background: #0f0f0f; */
+  color: white;
+}
+
+.work-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.work-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.work-divider {
+  width: 8rem;
+  height: 4px;
+  background: yellow; /* Light yellow accent */
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.work-header p {
+  margin-top: 1rem;
+  color: #a3a3a3;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Column layout */
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Card */
+.work-card {
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  border: 1px solid #fde68a;
+  border-radius: 1rem;
+  overflow: hidden;
+ background: rgba(40, 40, 40, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px rgba(231, 237, 105, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(253, 230, 138, 0.25);
+}
+
+/* Image */
+.work-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.work-img img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain; /* prevents cutting */
+  border-radius: 0.75rem;
+  background: rgba(40, 40, 40, 0.7);
+}
+
+/* Content */
+.work-content {
+  padding: 1.5rem;
+}
+
+.work-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  text-decoration: underline;
+}
+
+.work-content p {
+  color: #b3b3b3;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Tags */
+.work-tags {
+  margin-bottom: 1rem;
+}
+
+.work-tags span {
+  display: inline-block;
+  background: #262626;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgb(114, 114, 114);
+}
+
+/* Links */
+.work-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.work-links a {
+  flex: 1;
+  text-align: center;
+  background: #fcdd5f; /* light yellow */
+  color: #111;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.work-links a:hover {
+  background: #fcd34d; /* slightly darker yellow */
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .work-card {
+    flex-direction: row;
+  }
+
+  .work-img {
+    flex: 1;
+  }
+
+  .work-content {
+    flex: 2;
+  }
+}
+
+
+/* ****************************Contact************************ */
+#contactPage{
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contactPageTitle{
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.clientDesc{
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.clientImgs{
+  margin: 1rem 0;
+  display: flex;
+}
+
+.clientImg{
+  object-fit: cover;
+  width: 23%;
+  min-width: 9rem;
+  margin: auto;
+  padding: 0.25rem;
+  flex-wrap: wrap;
+}
+
+#clients{
+  padding: 2rem;
+}
+
+
+.contactDesc{
+  font-size: medium;
+  font-weight: 300;
+  padding: 1rem;
+}
+
+.contactForm{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  max-width: 60rem;
+}
+
+.name, .msg, .email{
+  font-size: medium;
+  width: 100%;
+  margin: 0.5rem;
+  max-width: 40rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(40,40,40);
+}
+
+.submitBtn{
+  background-color: white;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  padding: 0.75rem 3.5rem;
+}
+
+.links{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.link{
+  object-fit: cover;
+  height: 3rem;
+  margin: 0 0.75rem;
+  width: 3rem;
+}
+
+
+/* *****************************Footer******************* */
+
+.footer{
+  width: 100vw;
+  height: 4rem;
+  background-color: rgb(40,40,40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  font-weight: 300;
+}
+/* *********************responsive********************* */
+
+@media screen  and (max-width:840px){
+  .bg{
+    right: -10vw;
+  }
+  .introContent {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+  .hello{
+    font-size: 4.5vw;
+  }
+  
+}
+
+@media screen  and (max-width:480px){
+  .bg{
+    right: -20vw;
+  }
+  .skillBarText>p{
+    font-size: 3vw;
+  }
+  .skillBarImg{
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+
+  .skillBarText>h2{
+   font-size: 5vw; 
+  }
+
+}
+@media screen and (max-width:720px) {
+  .skillBarText>p{
+    font-size: 2vw;
+  }
+  .mobMenu{
+    display: flex;
+  }
+  .desktopMenu{
+    display: none;
+  }
+  .desktopMenuBtn{
+    display: none;
+  }
+  
+}
+@media screen and (max-width:585px) {
+  .worksImg{
+    height: 48vw;
+  }
+  
+}
+.education-section {
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 65rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  gap: 2rem;
+}
+
+/* Header */
+.education-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.header-line {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: yellow;
+  margin: 0 auto 1rem;
+}
+
+.education-header p {
+  font-size: 1rem;
+  color: #cfcfcf;
+  max-width: 45rem;
+  margin: 0 auto 2rem;
+}
+
+/* Container for entries in row */
+.education-entries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* gap between cards */
+  justify-content: center;
+  width: 100%;
+}
+
+/* Single entry card */
+.education-entry {
+  background-color: rgba(40,40,40,0.9);
+  border: 1px solid #555;
+  border-radius: 10px;
+  width: 18rem; /* fixed width for row layout */
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(231, 237, 105, 0.3);
+}
+
+.education-entry:hover {
+  transform: scale(1.03);
+}
+
+/* Image on top */
+.education-entry img {
+  width: 100%;
+  height: 8rem; /* adjust as needed */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Text content */
+.edu-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.edu-info h4 {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-top: 0.25rem;
+}
+
+.edu-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.edu-grade {
+  font-weight: bold;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.edu-desc {
+  margin-top: 0.5rem;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .education-entry {
+    width: 100%;
+  }
+}
+/* src/components/Skills/Skills.css */
+
+/* Skills Section */
+.skills-section {
+  padding: 6rem 5vw;
+  text-align: center;
+}
+
+.skills-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.skills-header p {
+  color: #ccc;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  max-width: 45rem;
+  margin: 0.5rem auto 2rem;
+}
+
+.underline {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: yellow;
+  margin: 0.5rem auto 1rem;
+  border-radius: 2px;
+}
+
+/* Category cards container */
+.skills-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Category card */
+.skills-category-card {
+  flex: 1 1 300px; /* min width for responsive layout */
+  max-width: 400px;
+  background: rgba(40, 40, 40, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px rgba(231, 237, 105, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.skills-category-card:hover {
+  transform: scale(1.03);
+}
+
+.skills-category-card h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 1.5rem;
+  color: #eee;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+/* Skill item */
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  border-radius: 2rem;
+  padding: 0.5rem 0.8rem;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.skill-item img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.skill-item:hover {
+  border-color: #cdec45;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skills-categories {
+    gap: 1.5rem;
+  }
+  .skills-category-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .skill-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .skill-item img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
