@@ -31,7 +31,7 @@ import figmaLogo from '../assets/tech_logo/figma.png';
 import netlifyLogo from '../assets/tech_logo/netlify.png';
 import vercelLogo from '../assets/tech_logo/vercel.png';
 import postgreLogo from '../assets/tech_logo/postgre.png';
-import csharpLogo from '../assets/tech_logo/csharp.png';
+
 
 
 // Education Section Logo's
@@ -109,7 +109,7 @@ export const SkillsInfo = [
       img: college,
       school: "KIET Group of Institutions, Gaziabad",
       date: "Sept 2023 - July 2027",
-      grade: "9 CGPA",
+      grade: "8.9 CGPA",
       // desc: "I am Persuing my Bachelor degree in Computer Science(B.TECH) from KIET Group of Institutions, Gaziabad. In Kiet I gained a strong foundation in programming, software development, and computer science principles. ",
       degree: "Bachelor of Technology",
     },

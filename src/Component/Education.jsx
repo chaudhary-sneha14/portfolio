@@ -28,7 +28,7 @@ export const Education = () => {
               </div>
             </div>
             <p className="edu-grade">Grade: {edu.grade}</p>
-            <p className="edu-desc">{edu.desc}</p>
+            {/* <p className="edu-desc">{edu.desc}</p> */}
           </div>
         ))}
       </div>
